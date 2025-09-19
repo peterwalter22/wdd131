@@ -1,0 +1,47 @@
+body {
+    background-color: #ddd;
+    font-size: 20px;
+}
+
+
+#content {
+    max-width: 60%;
+    border: 1px solid darkgray;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.3em;
+    color: #035f9c;
+}
+
+hr {
+    height: 3px;
+    margin-top: 20px;
+    width: 80%;
+    background-color: #035f9c;
+
+}
+
+h1, h2, p { 
+    text-align: center;
+
+}
+
+img {
+    display: block;
+    margin: 50px auto;
+    width : 50%;
+}
+
+#topics {
+    line-height: 1.5em;
+    margin: 0 auto;
+    width: 55%;
+
+}
+
+.list {
+    list-style-type:none;
+}
