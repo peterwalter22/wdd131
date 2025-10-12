@@ -14,11 +14,12 @@ header {
 }
 
 nav {
-  display: none; /* hidden on mobile */
+  display: none;
+  /* hidden on mobile */
 }
 
 .menu {
-  position: absolute;
+  position: relative;
   top: 1rem;
   right: 1rem;
   background: none;
@@ -40,12 +41,23 @@ h2 {
 }
 
 .gallery img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: fill;
   border: 4px solid white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+/* Add hover zoom effect for a polished look */
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 
 footer {
   background-color: #3b82f6;
@@ -74,24 +86,57 @@ footer {
   }
 }
 
-/* ========== Desktop Layout ========== */
-@media screen and (min-width: 900px) {
-  nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    margin-right: 2rem;
-  }
+/* ========== Modal Animation ========== */
+dialog.viewer::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease;
+}
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+dialog.viewer {
+  border: none;
+  padding: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 900px;
-    margin: 0 auto;
-  }
+dialog.viewer.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+dialog.viewer.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+dialog.viewer img {
+  max-width: 90%;
+  max-height: 80vh;
+  border: 4px solid white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.close-viewer:hover {
+  transform: scale(1.1);
+  background: darkred;
 }
