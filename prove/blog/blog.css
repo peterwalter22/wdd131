@@ -1,0 +1,138 @@
+/* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+
+body {
+  background-color: #fff;
+  color: #222;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  position: relative;
+  padding: 1rem 0;
+  border-bottom: 2px solid #d7a65f;
+}
+
+header h1 {
+  color: #4a224b;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid #f3d9a4;
+  border-bottom: 1px solid #f3d9a4;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: #b03a48;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== Menu Button for Mobile ===== */
+#menuToggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4a224b;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+/* ===== Book Review Section ===== */
+.book-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.book-meta {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.book-meta .stars {
+  color: #f9b600;
+}
+
+.book-details {
+  text-align: center;
+}
+
+.book-details h2 {
+  color: #b03a48;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.book-details img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.book-details .description {
+  margin-bottom: 1.5rem;
+}
+
+.book-details .author {
+  border-top: 1px solid #f3d9a4;
+  padding-top: 0.5rem;
+  color: #333;
+}
+
+/* ===== Responsive Layout for Larger Devices ===== */
+@media (min-width: 768px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    border: none;
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+  }
+
+  #menuToggle {
+    display: none;
+  }
+
+  .book-review {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+  }
+
+  .book-meta {
+    text-align: right;
+    flex: 1;
+  }
+
+  .book-details {
+    flex: 2;
+  }
+
+  .book-details img {
+    width: 200px;
+  }
+}
