@@ -1,43 +1,194 @@
+/* ================================
+   Credit Card Form Styling
+   Author: Peter
+   File: form.css
+   ================================ */
 
-/* form-demo.css */
+/* --- General Page Layout --- */
 body {
-  font-size: 1.2em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaeaea;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-form {
-  width: 50%;
-  margin: 0 auto;
-}
-h1, h2 {
+
+/* --- Header --- */
+header {
+  position: absolute;
+  top: 20px;
   text-align: center;
+  width: 100%;
 }
+
+h1 {
+  color: #333;
+  font-size: 1.8rem;
+}
+
+/* --- Credit Card Container --- */
+form {
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 360px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Add a "card back" shadow layer */
+form::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-color: #cfcfcf;
+  z-index: -1;
+}
+
+/* --- Labels --- */
 label {
-    display: block;
-    margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* --- Inputs & Selects --- */
+input,
+select,
+textarea {
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  transition: border 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #4caf50;
+  outline: none;
+}
+
+/* --- TOTAL Label --- */
+.total {
+  grid-column: 1 / 3;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+/* --- Credit Card Number --- */
+label[for="creditCardNumber"],
+#creditCardNumber {
+  grid-column: 1 / 3;
+}
+
+/* --- Card Holder --- */
+label[for="fullName"],
+#fullName {
+  grid-column: 1 / 3;
+}
+
+/* --- Expiration Date --- */
+label[for="expirationDate"] {
+  grid-column: 1 / 2;
+}
+
+#month,
+#year {
+  width: 80%;
+}
+
+/* --- CVV Input --- */
+input[name="cvv"] {
+  grid-column: 2;
+  justify-self: end;
+  width: 70%;
+}
+
+/* --- Payment Method Section --- */
+#paymentMethod {
+  grid-column: 1 / 3;
+}
+
+/* --- PayPal Username --- */
+#paypalUsernameContainer {
+  grid-column: 1 / 3;
+}
+
+/* --- Address Field --- */
+textarea {
+  grid-column: 1 / 3;
+  resize: vertical;
+}
+
+/* --- Submit Button --- */
+button {
+  grid-column: 1 / 3;
+  justify-self: center;
+  width: 140px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+/* --- Error Messages --- */
+.errors {
+  grid-column: 1 / 3;
+  white-space: pre-line;
+  color: red;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* --- Hide Elements --- */
+.hide {
+  display: none;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 420px) {
+  form {
+    width: 90%;
+    grid-template-columns: 1fr;
   }
-  
-  input,
-  select,
-  textarea {
+
+  #month,
+  #year {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc; /* Add a border to make it visually consistent */
-    border-radius: 4px;
   }
-  button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+  input[name="cvv"] {
+    width: 100%;
   }
-  .errors {
-    white-space: pre-line; /*needed for 2 errors to be on separate lines*/
-    color: red;
+
+  .total {
+    text-align: left;
   }
-  .hide {
-    display: none;
-  }
-          
+}
