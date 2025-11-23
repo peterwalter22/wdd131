@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RecipeBook | Apple Crisp</title>
-<!--https://peterwalter22.github.io/wdd131/prove/recipe/recipe.html-->
+  <title>RecipeBook Apple Crisp</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="recipe.css">
+  <script src="recipe.js" defer></script>
+  <!--https://peterwalter22.github.io/wdd131/prove/recipe/recipe.html-->
 
   <!-- OG / Twitter -->
   <meta property="og:type" content="website">
@@ -22,37 +25,33 @@
 
   <header class="header">
     <div class="logo-area">
-      <img src="../image/images/recipe-book.png" alt="RecipeBook logo" class="logo">
+      <img src="./images/recipe-book.png" alt="RecipeBook logo" class="logo">
       <h1 class="site-title">RecipeBook</h1>
     </div>
   </header>
 
   <!-- SEARCH BAR -->
   <div class="search-wrapper">
-    <input type="text" placeholder="Find a recipe">
-    <button class="search-btn">
-      <img src="../image/images/search.png" alt="search">
+    <input id="searchInput" type="text" placeholder="Find a recipe">
+    <button id="searchBtn" class="search-btn">
+      <img src="./images/Search_Icon.svg.png" alt="search">
     </button>
   </div>
 
   <!-- RECIPE CARD -->
-  <main class="recipe-card">
+  <main id="recipe-container" class="recipe-card">
 
-    <img src="../image/images/apple-crisp.jpg" alt="apple crisp" class="recipe-img">
+    <img id="recipe-img" src="" alt="" class="recipe-img">
 
     <div class="content-area">
 
-      <span class="tag">dessert</span>
+      <span id="recipe-tag" class="tag"></span>
 
-      <h2 class="recipe-title">Apple Crisp</h2>
+      <h2 id="recipe-title" class="recipe-title"></h2>
 
-      <div class="rating" aria-label="Rating: 4 out of 5 stars">
-        ⭐ ⭐ ⭐ ⭐ ☆
-      </div>
+      <div id="recipe-rating" class="rating"></div>
 
-      <p class="recipe-description">
-        This apple crisp recipe is a simple yet delicious fall dessert that’s great served warm with vanilla ice cream.
-      </p>
+      <p id="recipe-description" class="recipe-description"></p>
 
     </div>
   </main>
@@ -66,12 +65,12 @@
     </p>
 
     <div class="social">
-      <!-- Social media icons provided by AlfredoCreates -->
-      <a href="#"><img src="../image/images/instagram_logo.png" alt="instagram"></a>
-      <a href="#"><img src="../image/images/youtube.png" alt="youtube"></a>
-      <a href="#"><img src="../image/images/pinterest_logo.png" alt="pinterest"></a>
+      <a href="#"><img src="./images/instagram_logo.png" alt="instagram"></a>
+      <a href="#"><img src="./images/youtube.png" alt="youtube"></a>
+      <a href="#"><img src="./images/pinterest_logo.png" alt="pinterest"></a>
     </div>
   </footer>
 
 </body>
+
 </html>
