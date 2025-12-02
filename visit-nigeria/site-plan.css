@@ -1,0 +1,56 @@
+/* SITE PLAN CSS */
+
+/* GENERAL PAGE STYLING */
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background-color: #04612B; /* Dark green */
+  color: #FFFFFF; /* White text for accessibility */
+  padding: 2rem;
+  text-align: center;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #0A8A3A; /* Green for the rest of the page */
+}
+
+/* Override heading colors inside header ONLY */
+header h1,
+header h2 {
+  color: #FFFFFF; /* White inside header */
+}
+
+/* MAIN CONTENT */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+ul {
+  line-height: 1.8;
+}
+
+img {
+  margin-top: 10px;
+  border: 2px solid #04612B;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0A8A3A;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
