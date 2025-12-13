@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visit Nigeria | Home</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script type="module" src="scripts/visit-nigeria.js"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="images/visit-nigerialogo.png" alt="Visit Nigeria Logo" />
+      <h1>Visit Nigeria</h1>
+    </div>
+
+    <nav>
+      <button id="hamburger" aria-label="Open Menu">☰</button>
+      <ul id="nav-menu" class="hidden">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="travel-info.html">Travel Info</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SLIDESHOW -->
+  <section class="hero">
+    <div class="slideshow">
+      <img id="hero-image" src="images/lagos.jpg" alt="Nigeria Scenery" loading="lazy">
+      <div class="hero-text">
+        <h2>Discover the Beauty of Nigeria</h2>
+        <p>Culture. Adventure. Nature. Warmth.</p>
+        <a href="destinations.html" class="cta-btn">Explore Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO SECTION -->
+  <section class="intro">
+    <h2>Welcome to Nigeria</h2>
+    <p>
+      Nigeria is the heartbeat of Africa a place of vibrant culture, breathtaking landscapes,
+      incredible food, diverse languages, and warm hospitality. Whether you're exploring bustling
+      Lagos, peaceful Abuja, or the natural beauty of Obudu Mountain Resort, Nigeria offers
+      unforgettable experiences.
+    </p>
+  </section>
+
+  <!-- FEATURED DESTINATIONS (JS Dynamic) -->
+  <section class="featured">
+    <h2>Featured Destinations</h2>
+    <div id="featured-container" class="featured-grid">
+      <!-- JavaScript will insert destination cards here -->
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Visit Nigeria | Explore the Heart of Africa</p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
